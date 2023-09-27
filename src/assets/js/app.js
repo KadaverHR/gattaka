@@ -413,16 +413,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+  tippy('#submenu1', {
+    allowHTML: true,
+    content: ` 
+    <ul class="submenu__list">
+      <li class="submenu__item">
+        <a href="" class="submenu__link">Создание сайтов</a>
+      </li>
+      <li class="submenu__item">
+        <a href="" class="submenu__link ">Контекстная реклама</a>
+      </li>
+      <li class="submenu__item">
+        <a href="" class="submenu__link ">Маркетинговое исследование</a>
+      </li>
+      <li class="submenu__item">
+        <a href="" class="submenu__link ">Фирменный стиль</a>
+      </li>
+      <li class="submenu__item">
+        <a href="" class="submenu__link ">Полиграфия</a>
+      </li>
+      <li class="submenu__item">
+        <a href="" class="submenu__link">SEO-продвижение</a>
+      </li>
+      <li class="submenu__item">
+        <a href="" class="submenu__link">Техническая поддержка</a>
+      </li>
+    </ul>
+ `,
+    trigger: 'click',
+    theme: 'light',
+    interactive: true,
+    placement: 'bottom-start'
+  });
 
+  Fancybox.bind('[data-fancybox="test"]', {
+    autoFocus: false,
+    touch: false
+  });
 
-
-
-
-
-
-
-
-
+  $('input').removeAttr('autofocus');
 
 
 });

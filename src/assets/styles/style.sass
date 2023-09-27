@@ -31,7 +31,7 @@ $green: #50B566
     display: grid
     grid-auto-flow: column
     gap: 30px
-
+    align-items: baseline
   &__center
     gap: 30px
     display: grid
@@ -45,17 +45,25 @@ $green: #50B566
     gap: 25px
   &__link
     color: $gray
-
     font-size: 12px
     font-weight: 700
     line-height: 17px
     text-transform: uppercase
     transition: color $anim
+    cursor: pointer
     &:active, &:focus, &:hover
       color: $orange
+    &--list
+      display: grid
+      grid-auto-flow: column
+      gap: 5px
+      align-items: center
+    svg path 
+      transition: fill $anim
+    &:active svg path, &:focus svg path, &:hover svg path
+      fill: $orange
   &__tel
     color: $gray
-
     font-size: 13px
     font-weight: 700
     line-height: 17px
@@ -80,7 +88,6 @@ $green: #50B566
       display: none
   &__call
     color: $orange
-
     font-size: 13px
     font-weight: 600
     line-height: 17px
@@ -88,6 +95,7 @@ $green: #50B566
     grid-auto-flow: column
     align-items: center
     gap: 10px
+    cursor: pointer
     span
       position: relative
       &::before
@@ -106,6 +114,21 @@ $green: #50B566
       transition: fill $anim
     &:hover svg path, &:focus svg path, &:active svg path
       fill: $orange
+
+.submenu
+  &__list
+    display: grid
+    gap: 10px
+  &__link
+    cursor: pointer
+    color: $gray
+    font-size: 14px
+    font-weight: 400
+    line-height: 17px
+    &:active, &:focus, &:hover
+      text-decoration-line: underline
+      color: $gray
+
 @media all and ($small)
   .header
     &__center
@@ -181,9 +204,9 @@ $green: #50B566
   flex-direction: column
   position: fixed
   left: 0
-  top: 65px
+  top: 63px
   width: 100%
-  height: 100vh
+  height: calc(100vh - 63px - 240px)
   z-index: 100
   padding-left: 15px
   padding-top: 30px
@@ -205,7 +228,6 @@ $green: #50B566
       font-size: 12px
       font-weight: 700
       line-height: 17px
-
       text-transform: uppercase
       color: $gray
       display: grid
@@ -222,9 +244,8 @@ $green: #50B566
         height: 10px
         background-position: center
         background-size: cover
-        top: 50%
+        top: 4px
         right: 0
-        transform: translateY(-50%)
         background-repeat: no-repeat
         transition: background $anim
       &:hover, &:focus, &:active
@@ -235,6 +256,15 @@ $green: #50B566
         fill: $orange
       &:hover::after, &:focus::after, &:active::after
         background: url(/assets/img/arrow2.svg)
+    .header__list-mobile--2
+      padding-top: 20px
+      padding-bottom: 10px
+      padding-left: 25px
+      display: grid
+      gap: 10px
+      .header__link
+        font-size: 13px
+        text-transform: none
 
   // 1 экран
 
@@ -246,7 +276,7 @@ $green: #50B566
   min-height: 706px
   background-repeat: no-repeat
   background-position: center
-  background-size: contain
+  z-index: 0
   @media all and ($medium)
     background-size: cover
     min-height: 552px
@@ -293,14 +323,14 @@ $green: #50B566
       position: relative
       z-index: 1
       @media all and ($extraSmall)
-        padding: 10px 25px
+        padding: 10px 20px
     &--2
       padding: 15px 25px
       background: #39384A
       position: relative
       z-index: 0
       @media all and ($extraSmall)
-        padding: 10px 25px
+        padding: 10px 20px
     @media all and ($small)
       font-size: 26px
     @media all and ($extraSmall)
@@ -471,10 +501,11 @@ $green: #50B566
     justify-items: center
     grid-template-areas: "c1 a1 c2 a2 c3 a3 c4 a4 c5 a5 c6"
     @media all and ($small)
-      grid-template-areas: "c1 a1 c2 a2 c3 a3 c4" "..c5 a5 c6 .."
+      grid-template-areas: "c1 a1 c2 a2 c3 a3 c4" ". . c5 a5 c6 . ."
       gap: 30px 2px
     @media all and ($extraSmall)
       grid-template-areas: "c1 a1 c2" "c3 a3 c4" "c5 a5 c6"
+      justify-content: center
   &__item
     display: grid
     gap: 25px
@@ -764,6 +795,12 @@ $green: #50B566
 .market
   padding-top: 60px
   padding-bottom: 60px
+  background: #F2F6FF
+  @media all and ($small)
+    padding-top: 30px
+    padding-bottom: 50px
+  @media all and ($extraSmall)
+    padding-bottom: 40px
   &__bubble
     color: #FFF
     text-align: center
@@ -775,40 +812,74 @@ $green: #50B566
     background: #50B566
     width: fit-content
     margin: 0 auto
+    @media all and ($small)
+      font-size: 12px
   &__title-block
     padding-top: 45px
     padding-bottom: 45px
     display: flex
     flex-direction: column
     gap: 20px
+    @media all and ($extraSmall)
+      padding-bottom: 20px
+      padding-top: 20px
   &__title
     color: $gray
     text-align: center
     font-size: 36px
     font-weight: 700
     line-height: 45px
+    @media all and ($small)
+      font-size: 32px
+      line-height: 45px
+    @media all and ($extraSmall)
+      font-size: 21px
+      line-height: 36px
   &__subtitle
     color: $gray
     text-align: center
     font-size: 20px
     font-weight: 700
     line-height: 30px
+    @media all and ($extraSmall)
+      font-size: 16px
+      line-height: 24px
+
   &__shop-block
     display: grid
     grid-template-columns: repeat(3, 1fr)
     justify-content: space-between
     justify-items: center
-    gap: 20px
+    gap: 110px
     padding: 10px 0
+    @media all and ($extraSmall)
+      gap: 10px
   &__shop
     display: grid
     gap: 20px
+    max-width: 214px
+    @media all and ($extraSmall)
+      max-width: 90px
+
   &__shop-text
     color: $gray
     text-align: center
     font-size: 28px
     font-weight: 600
     line-height: 45px
+    @media all and ($small)
+      font-size: 22px
+      line-height: 45px
+    @media all and ($extraSmall)
+      font-size: 14px
+      line-height: 20px
+    &--ya
+      @media all and ($extraSmall)
+        display: none
+    &--mob
+      display: none
+      @media all and ($extraSmall)
+        display: block
   &__shop-btn
     margin-top: 40px
     color: #FFF
@@ -822,3 +893,531 @@ $green: #50B566
     margin-right: auto
     margin-left: auto
     width: fit-content
+    @media all and ($small)
+      font-size: 14px
+      margin-top: 10px
+
+.design
+  background: #fff
+  padding-top: 60px
+  padding-bottom: 60px
+  @media all and ($small)
+    padding-top: 50px
+  @media all and ($extraSmall)
+    padding-top: 30px
+    padding-bottom: 30px
+  &__title
+    max-width: 545px
+    color: $gray
+    font-size: 36px
+    font-weight: 700
+    line-height: 45px
+    padding-bottom: 10px
+    @media all and ($small)
+      font-size: 32px
+    @media all and ($extraSmall)
+      font-size: 21px
+      line-height: 36px
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    justify-content: space-between
+    justify-items: center
+    gap: 100px
+    padding-top: 60px
+    padding-bottom: 60px
+    @media all and ($small)
+      gap: 40px
+      padding-top: 40px
+      padding-bottom: 50px
+    @media all and ($extraSmall)
+      grid-template-columns: repeat(2,1fr)
+      gap: 50px 30px
+      padding-top: 10px
+      padding-bottom: 30px
+  &__item
+    display: grid
+    gap: 20px
+  &__img-wrapper
+    height: 120px
+    max-width: 150px
+    img
+      object-fit: contain
+    @media all and ($small)
+      height: 120px
+      max-width: 130px
+    @media all and ($extraSmall)
+      height: 90px
+      max-width: 110px
+  &__text
+    color: $gray
+    font-size: 18px
+    font-weight: 700
+    line-height: 24px
+    @media all and ($small)
+      font-size: 16px
+      line-height: 24px
+    span
+      color: $orange
+      text-decoration-line: underline
+  &__btn-wrapper
+    display: grid
+    gap: 10px
+    justify-items: center
+  &__btn
+    padding: 0px 20px
+    color: #fff
+    text-align: center
+    font-size: 16px
+    font-weight: 700
+    line-height: 40px
+    border-radius: 3px
+    &--gray
+      background: $gray
+    &--orange
+      background: $orange
+    @media all and ($small)
+      font-size: 14px
+
+.sale
+  padding-top: 30px
+  padding-bottom: 30px
+  background: $green
+  &__title-wrapper
+    display: grid
+    grid-auto-flow: column
+    gap: 20px
+    justify-items: center
+    justify-content: center
+    align-items: center
+    padding-bottom: 15px
+    img
+      @media all and ($extraSmall)
+        max-width: 52px
+  &__title
+    color: #FFF
+    font-size: 30px
+    font-weight: 700
+    line-height: 36px
+    @media all and ($small)
+      font-size: 26px
+    @media all and ($extraSmall)
+      font-size: 21px
+  &__desc
+    text-align: center
+    color: #FFF
+    font-size: 16px
+    font-weight: 500
+    line-height: 28px
+    span
+      font-weight: 700
+
+.design-services
+  padding-top: 50px
+  padding-bottom: 55px
+  background: $gray
+  @media all and ($small)
+    padding-top: 40px
+  @media all and ($extraSmall)
+    padding-top: 30px
+    padding-bottom: 30px
+  &__title
+    color: #FFF
+    font-size: 30px
+    font-weight: 700
+    line-height: 41px
+    padding-bottom: 15px
+    text-align: center
+    @media all and ($extraSmall)
+      font-size: 21px
+      line-height: 28px
+  &__subtitle
+    color: #FFF
+    font-size: 16px
+    font-weight: 400
+    line-height: 28px
+    text-align: center
+  &__price
+    color: #FFF
+    font-size: 16px
+    font-weight: 400
+    line-height: 28px
+    span
+      font-weight: 700
+    @media all and ($extraSmall)
+      font-size: 14px
+  &__content
+    justify-self: center
+    display: grid
+    grid-template-columns: minmax(65px,76px) 1fr
+    justify-items: center
+    justify-content: center
+    align-items: center
+    gap: 20px
+    padding-top: 50px
+    @media all and ($small)
+      padding-top: 30px
+    @media all and ($extraSmall)
+      grid-template-columns: 65px 1fr
+      padding-top: 20px
+  &__img-wrapper
+    min-width: 76px
+  &__price-block
+    display: grid
+    align-items: center
+
+.client
+  padding-top: 50px
+  padding-bottom: 50px
+  &__title-wrappper
+    position: relative
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-bottom: 15px
+    &::before
+      position: absolute
+      content: ""
+      height: 1px
+      width: 100%
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 0
+      background: #B7B6C7
+  &__title
+    color: $gray
+    text-align: center
+    font-size: 14px
+    font-weight: 700
+    line-height: 19px
+    text-transform: uppercase
+    position: relative
+    padding: 0 20px
+    background: #fff
+    z-index: 2
+    width: fit-content
+  &__list
+    padding-top: 40px
+    padding-bottom: 50px
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    align-items: center
+    justify-content: space-between
+    gap: 30px 50px
+    justify-items: center
+    @media all and ($small)
+      grid-template-columns: repeat(4, 1fr)
+    @media all and ($extraSmall)
+      grid-template-columns: repeat(3, 1fr)
+      gap: 20px 30px
+      padding-top: 15px
+      padding-bottom: 30px
+.form
+  &__block
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 20px 30px
+    padding-top: 30px
+    padding-bottom: 30px
+    @media all and ($extraSmall)
+      grid-template-columns: 1fr
+      padding-top: 15px
+      padding-bottom: 30px
+  &__input-block
+    &:first-child
+      grid-column: 1/3
+      @media all and ($extraSmall)
+        grid-column: 1/2
+  &__wrapper
+    border-radius: 3px
+    border: 3px dashed $orange
+    padding: 40px
+    @media all and ($small)
+      padding: 30px
+    @media all and ($extraSmall)
+      padding: 20px 15px
+      margin-left: -18px
+      margin-right: -18px
+  &__title
+    color: $gray
+    font-size: 30px
+    font-weight: 700
+    line-height: 41px
+    @media all and ($small)
+      font-size: 26px
+    @media all and ($extraSmall)
+      font-size: 21px
+      line-height: 32px
+  input, textarea
+    width: 100%
+    padding: 12px 40px
+    background-repeat: no-repeat
+    background-position: 10px center
+    border-radius: 3px
+    border: 1px solid #B7B6C7
+    color: $gray
+    font-size: 14px
+    font-weight: 400
+    line-height: 14px
+    resize: none
+    &:active, &:focus, &:hover
+      border: 1px solid #B7B6C7
+      outline: none
+    &::placeholder
+      color: #757575
+      font-family: "Open Sans", sans-serif
+      font-size: 14px
+      font-weight: 400
+      line-height: 14px
+  input[name="name"]
+    background-image: url(/assets/img/f1.svg)
+  input[name="email"]
+    background-image: url(/assets/img/f3.svg)
+  input[name="tel"]
+    background-image: url(/assets/img/f2.svg)
+  textarea[name='question']
+    background-image: url(/assets/img/callq.svg)
+  textarea
+    max-height: 42px
+  &__btn
+    padding: 0px 20px
+    color: #fff
+    text-align: center
+    font-size: 16px
+    font-weight: 700
+    line-height: 40px
+    border-radius: 3px
+    background: $orange
+    @media all and ($small)
+      font-size: 14px
+  &__btn-wrapper
+    display: flex
+    justify-content: center
+
+  &--call
+    .form__block
+      grid-template-columns: 1fr
+      padding-top: 20px
+    .form__input-block
+      &:first-child
+        grid-column: 1/2
+
+.contacts
+  padding-top: 50px
+  background: #F5F6F9
+  @media all and ($extraSmall)
+    padding-top: 30px
+  &__title
+    color: $gray
+    font-size: 36px
+    font-weight: 700
+    line-height: 45px
+    @media all and ($extraSmall)
+      font-size: 21px
+      line-height: 28px
+  &__title-wrapper
+    padding-bottom: 20px
+  &__desc-wrapper
+    padding-bottom: 13px
+
+  &__desc
+    color: $gray
+    font-size: 18px
+    font-style: italic
+    font-weight: 400
+    line-height: 24px
+  &__list
+    border-top: 1px solid #B7B6C7
+    padding-top: 10px
+    padding-bottom: 40px
+    display: grid
+    gap: 10px 20px
+    justify-content: space-between
+    grid-template-areas: "city . call" "adress mail tel"
+    @media all and ($extraSmall)
+      padding-bottom: 30px
+      grid-template-areas: "city" "adress" "mail" " . " "call" "tel"
+  &__city
+    color: $gray
+    font-size: 18px
+    font-weight: 700
+    line-height: 24px
+  &__adress
+    color: $gray
+    font-size: 14px
+    font-weight: 400
+    line-height: 19px
+    span
+      color: $orange
+  &__call
+    color: $orange
+    font-size: 14px
+    font-style: italic
+    font-weight: 400
+    line-height: 19px
+    &:active, &:focus, &:hover
+      text-decoration-line: underline
+      color: $orange
+  &__mail
+    color: $gray
+    font-size: 14px
+    font-weight: 400
+    line-height: 19px
+    a
+      color: $orange
+      &:active, &:focus, &:hover
+        text-decoration-line: underline
+        color: $orange
+  &__tel
+    color: $gray
+    font-size: 14px
+    font-weight: 400
+    line-height: 19px
+    a
+      color: $gray
+      &:active, &:focus, &:hover
+        text-decoration-line: underline
+        color: $gray
+  &__map
+    height: 313px
+.contacts__item--city
+  grid-area: city
+.contacts__item--call
+  grid-area: call
+.contacts__item--adress
+  grid-area: adress
+.contacts__item--mail
+  grid-area: mail
+.contacts__item--tel
+  grid-area: tel
+  justify-self: end
+  @media all and ($extraSmall)
+    justify-self: start
+
+.footer
+  padding-top: 30px
+  padding-bottom: 37px
+  &__area
+    display: grid
+    grid-template-areas: "logo ." "copy conf" "company social"
+    justify-content: space-between
+    gap: 12px
+    @media all and ($extraSmall)
+      grid-template-areas: "logo logo" "conf conf" "copy copy" "company social"
+      justify-content: center
+      gap: 12px 100px
+      justify-items: center
+  &__copy-text
+    color: $gray
+    font-size: 14px
+    font-style: italic
+    font-weight: 400
+    line-height: 19px
+  &__company-link
+    color: $orange
+    font-size: 14px
+    font-style: italic
+    font-weight: 400
+    line-height: 19px
+    &:active, &:focus, &:hover
+      color: $orange
+      text-decoration-line: underline
+  &__conf-link
+    color: #9797A0
+    font-size: 14px
+    font-style: italic
+    font-weight: 400
+    line-height: 19px
+    text-decoration-line: underline
+    transition: color $anim
+    &:active, &:focus, &:hover
+      color: $gray
+  &__social-wrapper
+    display: grid
+    grid-auto-flow: column
+    gap: 35px
+    justify-content: start
+  &__social-link
+    .svg path
+      transition: fill $anim
+    &:hover svg path, &:focus svg path, &:active svg path
+      fill: $orange
+
+.footer__logo
+  grid-area: logo
+  padding-bottom: 10px
+.footer__copy
+  grid-area: copy
+.footer__company
+  grid-area: company
+.footer__conf
+  grid-area: conf
+.footer__social
+  grid-area: social
+
+.tippy-box
+  border-radius: 3px
+  padding: 20px
+.tippy-content
+  padding: 0
+
+.call
+  &__title
+    color: $gray
+    font-size: 18px
+    font-weight: 700
+    line-height: 21px
+    padding-bottom: 27px
+  &__desc
+    color: $gray
+    font-size: 14px
+    font-weight: 400
+    line-height: 17px
+
+.checkbox
+  &__input
+    display: none !important
+  &__item label
+    display: flex
+    position: relative
+    cursor: pointer
+    margin: 0
+    text-align: center
+    align-items: flex-start
+  &__custom
+    display: block
+    position: relative
+    width: 17px
+    height: 17px
+    border-radius: 3px
+    border: 1px solid #B7B6C7
+    text-align: center
+    margin-right: 8px
+  &__custom::before
+    content: url(/assets/img/check.svg)
+    text-align: center
+    position: absolute
+    top: -23%
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+    transition: opacity 0.3s ease-in-out
+  &__input:checked ~ .checkbox__custom
+    background: #95959F
+  &__input:checked ~ .checkbox__custom::before
+    opacity: 1
+  &__text
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    font-weight: 400
+    font-size: 13px
+    line-height: 110%
+    color: $gray
+    a
+      color: $orange
+      &:active, &:hover, &:focus
+        text-decoration-line: underline

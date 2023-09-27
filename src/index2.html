@@ -1,0 +1,192 @@
+{% set title = "Все проекты" %} {% set bodyClass = "all-prjct" %} {% extends
+"default.html" %} {% block content %}
+<main>
+
+  <section class="banner__bg">
+    <div class="banner">
+      <div class="grid-container banner__grid">
+        <div class="banner__content-left">
+          <div class="banner__logo-wrapper">
+            <img src="assets/img/logo.svg" alt="Logo">
+          </div>
+          <div class="banner__title-wrapper">
+            <h2 class="banner__title">
+              Все проекты
+            </h2>
+          </div>
+        </div>
+        <div class="banner__content-right">
+          <div class="banner__content-map-block">
+            <p class="banner__content-label">Регион</p>
+            <p class="banner__content-map">Орел и вся Россия</p>
+          </div>
+          <a href="+74862302090" class="banner__content-tel">8 (4862) 30-20-90</a>
+          <button data-fancybox="test" data-src="#order" data-type="inline" class="btn-border banner__content-button ">
+            Оставить заявку
+          </button>
+          <div style="display: none" id="order" class="call__modal">
+            <p class="call__title">
+              Заказать дизайн-проект / задать вопрос
+            </p>
+            <p class="call__desc">
+              Оставьте контактные данные и менеджер перезвонит Вам в ближайшее время.
+            </p>
+            <form action="" method="get" class="form form--call">
+              <div class="form__block">
+                <div class="form__input-block">
+                  <label for="name">
+                    <input type="text" name="name" id="name" required placeholder="Имя" />
+                  </label>
+                </div>
+                <div class="form__input-block">
+                  <label for="tel">
+                    <input type="tel" name="tel" id="tel" placeholder="Телефон" required />
+                  </label>
+                </div>
+                <div class="form__input-block">
+                  <label for="email">
+                    <input type="email" name="email" id="email" required placeholder="E-mail" />
+                  </label>
+                </div>
+                <div class="checkbox__item">
+                  <label for="check2">
+                    <input class="checkbox__input" type="checkbox" name="check2" id="check2">
+                    <span class="checkbox__custom"></span>
+                    <span class="checkbox__text">
+                      Я согласен с условиями передачи данных.<br> <a href="">Соглашение.</a>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__btn-wrapper">
+                <button data-fancybox="test" data-src="#call" data-type="inline" class="btn-orange form__btn"
+                  type="submit">Заказать звонок</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <ul class="projects__list">
+          <li class="projects__item active">
+            <a href="/" class="projects__item-link">
+              Все&nbsp;проекты
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="/" class="projects__item-link">
+              сайт-визитка
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="/" class="projects__item-link">
+              интернет-магазин
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="/" class="projects__item-link">
+              фирменный&nbsp;стиль
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="/" class="projects__item-link">
+              web-баннеры
+            </a>
+          </li>
+          <li class="projects__item">
+            <a href="/" class="projects__item-link">
+              полиграфия
+            </a>
+          </li>
+        </ul>
+
+        <div class="prjct__project-list-box">
+          <p class="prjct__project-list-title">
+            Сайты
+          </p>
+
+          <ul class="prjct__project-list">
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+            <li class="prjct__project-item">
+              <a class="prjct__project-item-link" href="">
+                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
+                <p class="prjct__project-item-title">
+                  сайт-визитка
+                  “Тихий омут”
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+{% endblock %}

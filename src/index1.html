@@ -1,0 +1,537 @@
+{% set title = "gattaka" %} {% set bodyClass = "is-landing" %} {% extends
+"default.html" %} {% block content %}
+<main>
+
+  <section class="banner__bg">
+    <div class="banner">
+      <div class="grid-container banner__grid">
+        <div class="banner__content-left">
+          <div class="banner__logo-wrapper">
+            <img src="assets/img/logo.svg" alt="Logo">
+          </div>
+          <div class="banner__title-wrapper">
+            <h1 class="banner__title">
+              <span class="banner__title--1"> Разработка <span class="banner__title--line">под ключ</span></span><br>
+              <span class="banner__title--2">вашего дизайн-проекта</span>
+            </h1>
+          </div>
+        </div>
+        <div class="banner__content-right">
+          <div class="banner__content-map-block">
+            <p class="banner__content-label">Регион</p>
+            <p class="banner__content-map">Орел и вся Россия</p>
+          </div>
+          <a href="+74862302090" class="banner__content-tel">8 (4862) 30-20-90</a>
+          <button data-fancybox="test" data-src="#order" data-type="inline" class="btn-border banner__content-button ">
+            Оставить заявку
+          </button>
+          <div style="display: none" id="order" class="call__modal">
+            <p class="call__title">
+              Заказать дизайн-проект / задать вопрос
+            </p>
+            <p class="call__desc">
+              Оставьте контактные данные и менеджер перезвонит Вам в ближайшее время.
+            </p>
+            <form action="" method="get" class="form form--call">
+              <div class="form__block">
+                <div class="form__input-block">
+                  <label for="name">
+                    <input type="text" name="name" id="name" required placeholder="Имя" />
+                  </label>
+                </div>
+                <div class="form__input-block">
+                  <label for="tel">
+                    <input type="tel" name="tel" id="tel" placeholder="Телефон" required />
+                  </label>
+                </div>
+                <div class="form__input-block">
+                  <label for="email">
+                    <input type="email" name="email" id="email" required placeholder="E-mail" />
+                  </label>
+                </div>
+                <div class="checkbox__item">
+                  <label for="check2">
+                    <input class="checkbox__input" type="checkbox" name="check2" id="check2">
+                    <span class="checkbox__custom"></span>
+                    <span class="checkbox__text">
+                      Я согласен с условиями передачи данных.<br> <a href="">Соглашение.</a>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__btn-wrapper">
+                <button data-fancybox="test" data-src="#call" data-type="inline" class="btn-orange form__btn"
+                  type="submit">Заказать звонок</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="banner__content-bottom">
+          <div class="banner__content-block">
+            <img src="assets/img/b1.svg">
+            <p class="banner__content-block-text">
+              <a href="">Создаем</a>&nbspсайты более 10 лет
+            </p>
+          </div>
+          <div class="banner__content-block banner__content-block--right">
+            <img src="assets/img/b2.svg">
+            <p class="banner__content-block-text">
+              Выполнение
+              проектов
+              под ключ
+            </p>
+          </div>
+          <div class="banner__content-block">
+            <img src="assets/img/b3.svg">
+            <p class="banner__content-block-text">
+              Работаем
+              по всей
+              России
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="complex">
+    <div class="grid-container">
+      <div class="complex__title-wrappper">
+        <p class="complex__title">
+          Полный комплекс услуг
+        </p>
+      </div>
+      <ul class="complex__list">
+        <li class="complex__item complex1">
+          <img src="assets/img/c1.svg">
+          <p>
+            Создание
+            концепции
+          </p>
+        </li>
+        <li class="complex__item complex__item--arrow arrow1">
+          <img src="assets/img/ca.svg">
+        </li>
+        <li class="complex__item complex2">
+          <img src="assets/img/c2.svg">
+          <p>
+            Формирование
+            фирменного
+            стиля
+          </p>
+        </li>
+        <li class="complex__item complex__item--arrow arrow2">
+          <img src="assets/img/ca.svg">
+        </li>
+        <li class="complex__item complex3">
+          <img src="assets/img/c3.svg">
+          <p>
+            Дизайн
+            проекта
+          </p>
+        </li>
+        <li class="complex__item complex__item--arrow arrow3">
+          <img src="assets/img/ca.svg">
+        </li>
+        <li class="complex__item complex4">
+          <img src="assets/img/c4.svg">
+          <p>
+            Frontend
+            и Backend
+            разработка
+          </p>
+        </li>
+        <li class="complex__item complex__item--arrow arrow4">
+          <img src="assets/img/ca.svg">
+        </li>
+        <li class="complex__item complex5">
+          <img src="assets/img/c5.svg">
+          <p>
+            Тестирование
+            проекта
+          </p>
+        </li>
+        <li class="complex__item complex__item--arrow arrow5">
+          <img src="assets/img/ca.svg">
+        </li>
+        <li class="complex__item complex6">
+          <img src="assets/img/c6.svg">
+          <p>
+            Реклама
+            и продвижение
+          </p>
+        </li>
+      </ul>
+
+
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="grid-container">
+      <div class="projects__title-wrapper">
+        <h2 class="projects__title">
+          Все <span>проекты</span><br>
+          нашей дизайн-cтудии
+        </h2>
+      </div>
+      <ul class="projects__list">
+        <li class="projects__item active">
+          <a href="/" class="projects__item-link">
+            Все&nbsp;проекты
+          </a>
+        </li>
+        <li class="projects__item">
+          <a href="/" class="projects__item-link">
+            сайт-визитка
+          </a>
+        </li>
+        <li class="projects__item">
+          <a href="/" class="projects__item-link">
+            интернет-магазин
+          </a>
+        </li>
+        <li class="projects__item">
+          <a href="/" class="projects__item-link">
+            фирменный&nbsp;стиль
+          </a>
+        </li>
+        <li class="projects__item">
+          <a href="/" class="projects__item-link">
+            web-баннеры
+          </a>
+        </li>
+        <li class="projects__item">
+          <a href="/" class="projects__item-link">
+            полиграфия
+          </a>
+        </li>
+      </ul>
+
+      <div class="projects__content">
+        <div class="projects__content-nav">
+          <button class="projects__content-btn projects__content-btn--prev">
+
+          </button>
+          <p class="projects__content-title">
+            Сайт-визитка
+          </p>
+          <button class="projects__content-btn projects__content-btn--next">
+
+          </button>
+        </div>
+        <div class="projects__windows">
+          <img class="projects__windows-wrapper" src="assets/img/prwindow.png">
+          <img class="projects__windows-wrapper--mobile " src="assets/img/prwindow-mob.png" alt="">
+          <img class="projects__windows-img projects__windows-img--1" src="assets/img/p1.jpg">
+          <img class="projects__windows-img projects__windows-img--2" src="assets/img/p2.jpg">
+          <img class="projects__windows-img projects__windows-img--3" src="assets/img/p3.jpg">
+          <div class="projects__windows-desc">
+            <p class="projects__windows-desc-title">
+              Тип проекта:
+            </p>
+            <p class="projects__windows-desc-text">
+              сайт-визитка
+            </p>
+            <p class="projects__windows-desc-title">
+              Город: Орел
+            </p>
+            <a href="" class="projects__windows-desc-link">
+              Узнать больше
+            </a>
+          </div>
+        </div>
+        <div class="projects__map-block">
+          <p class="projects__map-text">
+            Создаем <span>надежные</span> сайты<br>
+            сайты по всей России
+          </p>
+          <img class="projects__map-img" src="assets/img/pmap.png">
+          <button class="btn-border projects__map-btn">
+            Заказать звонок
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="market">
+    <div class="grid-container">
+      <div class="market__bubble">
+        Макетплейсы
+      </div>
+      <div class="market__title-block">
+        <h2 class="market__title">
+          Настройка выгрузок в макетплейсы
+        </h2>
+        <h3 class="market__subtitle">
+          Настроим фиды и api для выгрузок
+        </h3>
+      </div>
+      <div class="market__shop-block">
+        <div class="market__shop">
+          <img src="assets/img/m1.png">
+          <p class="market__shop-text">
+            Озон
+          </p>
+        </div>
+        <div class="market__shop">
+          <img src="assets/img/m2.png">
+          <p class="market__shop-text market__shop-text--ya">
+            Яндекс.Маркет
+          </p>
+          <p class="market__shop-text market__shop-text--mob">
+            Яндекс<br>Маркет
+          </p>
+        </div>
+        <div class="market__shop">
+          <img src="assets/img/m3.png">
+          <p class="market__shop-text">
+            Мегамаркет
+          </p>
+
+        </div>
+      </div>
+      <button class="btn-orange market__shop-btn">
+        Узнать больше
+      </button>
+    </div>
+  </section>
+
+  <section class="design">
+    <div class="grid-container">
+      <h2 class="design__title">
+        Дизайн-проект для вашего сайта под ключ
+      </h2>
+      <div class="design__list">
+        <div class="design__item">
+          <div class="design__img-wrapper">
+            <img src="assets/img/d1.svg">
+          </div>
+          <p class="design__text">
+            Создание<br><span>прототипа</span>
+          </p>
+        </div>
+        <div class="design__item">
+          <div class="design__img-wrapper">
+            <img src="assets/img/d2.svg">
+          </div>
+          <p class="design__text">
+            Создание<br><span>логотипа</span>
+          </p>
+        </div>
+
+
+        <div class="design__item">
+          <div class="design__img-wrapper">
+            <img src="assets/img/d3.svg">
+          </div>
+          <p class="design__text">
+            Презентация<br>и <span>реклама</span>
+          </p>
+        </div>
+
+
+        <div class="design__item">
+          <div class="design__img-wrapper">
+            <img src="assets/img/d4.svg">
+          </div>
+          <p class="design__text">
+            Оформление<br><span>макетплейсов</span>
+          </p>
+        </div>
+      </div>
+      <div class="design__btn-wrapper">
+        <button class="btn-gray design__btn design__btn--gray">
+          Рассчитать
+        </button>
+        <button class="btn-orange design__btn design__btn--orange">
+          Заказать
+        </button>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <section class="sale">
+    <div class="grid-container">
+      <div class="sale__title-wrapper">
+        <img src="assets/img/sale.svg">
+        <p class="sale__title">
+          Скидка на сайт
+        </p>
+      </div>
+      <p class="sale__desc">
+        При заказе приложения на <span>Android</span> и <span>Ios</span> скидка <span>10%</span> на создание сайта
+      </p>
+    </div>
+  </section>
+
+  <section class="design-services">
+    <div class="grid-container">
+      <h2 class="design-services__title">
+        Услуги дизайнера
+      </h2>
+      <p class="design-services__subtitle">
+        Проектирование вашего сайта нашими ведущими специалистами:
+      </p>
+      <div class="design-services__content">
+        <div class="design-services__img-wrapper">
+          <img src="assets/img/ds.svg">
+        </div>
+        <div class="design-services__price-block">
+          <p class="design-services__price">
+            <span>1 000 руб. в час</span> – услуги web-дизайнера
+          <p class="design-services__price">
+            <span> 1 500 руб. в час</span> – услуги дизайнера полиграфии
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="client">
+    <div class="grid-container">
+      <div class="client__title-wrappper">
+        <p class="client__title">
+          Среди наших клиентов
+        </p>
+      </div>
+      <ul class="client__list">
+        <li class="client__item">
+          <img src="assets/img/1.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/2.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/3.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/4.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/5.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/6.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/7.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/8.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/9.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/10.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/11.png" alt="Газпром">
+        </li>
+        <li class="client__item">
+          <img src="assets/img/12.png" alt="Газпром">
+        </li>
+      </ul>
+      <div class="form__wrapper">
+        <form action="" method="get" class="form">
+          <div class="form__title-wrapper">
+            <p class="form__title">
+              Заказать дизайн-проект / задать вопрос
+            </p>
+          </div>
+          <div class="form__block">
+            <div class="form__input-block">
+              <label for="name">
+                <input type="text" name="name" id="name" required placeholder="Имя" />
+              </label>
+            </div>
+            <div class="form__input-block">
+              <label for="tel">
+                <input type="tel" name="tel" id="tel" placeholder="Телефон" required />
+              </label>
+            </div>
+
+            <div class="form__input-block">
+              <label for="email">
+                <input type="email" name="email" id="email" required placeholder="E-mail" />
+              </label>
+            </div>
+
+            <div class="checkbox__item">
+              <label for="check1">
+                <input class="checkbox__input" type="checkbox" name="check1" id="check1">
+                <span class="checkbox__custom"></span>
+                <span class="checkbox__text">
+                  Я согласен с условиями передачи данных.<br> <a href="">Соглашение.</a>
+                </span>
+              </label>
+            </div>
+
+          </div>
+          <div class="form__btn-wrapper">
+            <button class="btn-orange form__btn" type="submit">Отправить сообщение</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="grid-container">
+      <div class="contacts__title-wrapper">
+        <h2 class="contacts__title">
+          Контактная информация
+        </h2>
+      </div>
+      <div class="contacts__desc-wrapper">
+        <p class="contacts__desc">
+          Работаем по всей России
+        </p>
+      </div>
+      <ul class="contacts__list">
+        <li class="contacts__item contacts__item--city">
+          <p class="contacts__city">
+            Орел
+          </p>
+        </li>
+        <li class="contacts__item contacts__item--call">
+          <a href="" class="contacts__call">
+            Заказать обратный звонок
+          </a>
+        </li>
+
+        <li class="contacts__item contacts__item--adress">
+          <p class="contacts__adress">
+            Адрес: 117630, <span>ул. Михалицына, д.10</span>
+          </p>
+        </li>
+        <li class="contacts__item contacts__item--mail">
+          <p class="contacts__mail">
+            E-mail: <a href="mailto:gattaka@com" type="mail">gattaka@com</a>
+          </p>
+        </li>
+        <li class="contacts__item contacts__item--tel">
+          <p class="contacts__tel">
+            Тел.:
+            <a href="tel:+7800350-00-87" type="tel">8 (800) 350-00-87</a>
+          </p>
+        </li>
+      </ul>
+
+    </div>
+    <div class="contacts__map">
+      <script type="text/javascript" charset="utf-8" async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A75588bbcc9896dfcaef0492b733e383467a1bb271ac0f8cadb473f8469082b8c&amp;width=100%25&amp;height=313&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+  </section>
+</main>
+
+
+
+{% endblock %}

@@ -1,3 +1,8 @@
+$anim: 0.3s ease-in-out
+$gray: #38384A
+$orange: #EF4926
+$green: #50B566
+
 *
   box-sizing: border-box
 
@@ -11,28 +16,24 @@ html
 
 body
   position: relative
-  scrollbar-color: #0A0A14
+  scrollbar-color: $gray
   scrollbar-width: thin
   font-family: "Open Sans", sans-serif
 
   &::-webkit-scrollbar
-    width: 15px
-    background-color: #0A0A14
+    width: 6px
+    background-color: $gray
   &::-webkit-scrollbar-track
-    background-color: #0A0A14
-    margin-top: 118px
+    background-color: $gray
+    // margin-top: 118px
     border-top: 150px solid transparent
     border-bottom: 150px solid transparent
 
   &::-webkit-scrollbar-thumb
-    border-radius: 100px
-    border: 2px solid transparent
+    // border-radius: 3px
+    border: 1px solid transparent
     background-clip: content-box
-    background-color: #F7B70B
-
-
-
-body
+    background-color: #F2F6FF
 
 a
   text-decoration-line: none
@@ -108,30 +109,41 @@ button
 
 .stop-scroll
   overflow: hidden
-
-.button
-  display: inline-block
-  padding: 20px 110px
-  background: #F7B70B
-  border-radius: 3px
-  border: 1px solid #F7B70B
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out
-  font: 600 16px/16px 'Kreadon', sans-serif
-  color: #0A0A14
-  text-transform: uppercase
-  text-align: center
-  @media all and ($small)
-    padding: 18px 56px
-    font: 600 14px/14px 'Kreadon', sans-serif
-  @media all and ($extraSmall)
-    padding: 14px
-    font: 600 12px/12px 'Kreadon', sans-serif
-
-  &:hover,
-  &:focus,
-  &:active
-    transform: scale(1.02)
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
   &__wrapper
     padding: 40px 0 25px
     width: 100%
+  section
+    display: none
+  main
+    height: calc(100vh - 63px - 240px)
+
+.btn-gray
+  transition: background $anim
+  min-width: 194px
+  &:active, &:hover, &:focus
+    background: #2F2F3D
+.btn-orange
+  min-width: 194px
+  transition: background $anim
+  &:active, &:hover, &:focus
+    background: #DA3B13
+.btn-border
+  transition: background $anim, color $anim
+  &:active, &:hover, &:focus
+    color: #fff
+    background: $orange
+
+.fancybox__content > .carousel__button.is-close
+  color: #7E808B
+  top: 33px
+  right: 40px
+  width: 14px
+  height: 14px
+.carousel__button svg
+  filter: none
+
+.fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content
+  cursor: auto
+.fancybox__content
+  border-radius: 3px
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15)

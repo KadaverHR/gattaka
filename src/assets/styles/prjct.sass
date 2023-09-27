@@ -1,0 +1,47 @@
+.all-prjct
+  .banner
+    background: $gray
+  .banner__content-label
+    color: #fff
+  .banner__content-tel
+    color: #fff
+  .banner__title-wrapper
+    padding-top: 30px
+  .banner__content-right
+    padding-top: 40px
+  .banner__title
+    letter-spacing: -1.12px
+  .projects__item.active .projects__item-link
+    border-radius: 50px
+    border: 2px solid #FFF
+    padding: 0 20px
+    color: #fff
+  .projects__list
+    margin-top: 45px
+    padding-bottom: 40px
+    border-bottom: 1px solid #676770
+
+.prjct
+  &__project-list-box
+    margin-top: 30px
+  &__project-list-title
+    font-size: 30px
+    line-height: 1.1
+    color: #fff
+    margin-bottom: 35px
+  &__project-list
+    display: grid
+    grid-template-columns: repeat(auto-fill, 200px)
+    gap: 50px
+    justify-content: space-between
+    @media all and ($extraSmall)
+      grid-template-columns: repeat(auto-fill, 130px)
+  &__project-item-title
+    font-size: 16px
+    line-height: 22px
+    text-transform: uppercase
+    color: #fff
+    text-align: center
+  &__project-item-link
+    display: grid
+    gap: 15px
