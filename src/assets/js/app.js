@@ -454,6 +454,47 @@ document.addEventListener('DOMContentLoaded', function () {
   $('input').removeAttr('autofocus');
 
 
+
+
+  ///slider
+
+  var swiper = new Swiper(".gallery-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 2,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 5,
+      },
+      769: {
+        slidesPerView: 7,
+        spaceBetween: 10,
+      }
+    }
+  });
+  var swiper2 = new Swiper(".gallery-top", {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+
+
+
+
+
+
+
+
 });
 
 

@@ -1,0 +1,94 @@
+.services
+  &__top
+    background: #F7F8FB
+    padding-top: 60px
+  &__top-box
+    grid-auto-flow: column
+    justify-content: space-between
+    padding-bottom: 30px
+    border-bottom: 1px solid #676770
+    display: grid
+  &__top-title
+    color: $gray
+    font-size: 36px
+    font-weight: 700
+    line-height: 45px
+  .banner__content-button
+    margin-left: 0
+    color: #fff
+    background: $orange
+    border-radius: 3px
+    padding: 0px 20px
+  .banner__content-tel
+    font-weight: 400
+    span
+      font-weight: 600
+    @media all and ($extraSmall)
+      display: none
+  &__top-contacts-block
+    display: grid
+    grid-auto-flow: column
+    gap: 30px
+    align-items: center
+  &__item
+    grid-auto-flow: column
+    padding-top: 50px
+    padding-bottom: 60px
+    gap: 80px
+    @media all and ($small)
+      gap: 30px
+    @media all and ($extraSmall)
+      grid-auto-flow: row
+      padding-top: 30px
+      padding-bottom: 30px
+  &__item-title
+    color: $gray
+    font-size: 30px
+    font-weight: 700
+    line-height: 41px
+    margin-bottom: 40px
+    @media all and ($extraSmall)
+      margin-bottom: 30px
+  &__item-text
+    font-size: 16px
+    font-weight: 400px
+    line-height: 26px
+    color: $gray
+    margin-bottom: 15px
+    &--strong
+      font-weight: 700
+      margin-bottom: 0
+  &__item-link
+    display: grid
+    grid-auto-flow: column
+    align-items: center
+    justify-content: end
+    gap: 18px
+    margin-bottom: 40px
+    @media all and ($extraSmall)
+      display: none
+    &--mobile
+      display: none
+      @media all and ($extraSmall)
+        display: grid
+        justify-content: start
+        margin-bottom: 30px 
+    &:active, &:focus, &:hover
+      text-decoration: underline
+  &__item-img
+    object-fit: cover
+    @media all and ($small)
+      width: 370px
+      height: 275px
+      object-fit: cover
+      object-position: center
+    @media all and ($extraSmall)
+      width: 100%
+  &__bottom
+    background: #F7F8FB
+
+  &__center
+    .services__item
+      .services__item-img-box
+        @media all and ($extraSmall)
+          order: 1

@@ -87,7 +87,24 @@ button
 
 .grid-container
   display: grid
-  max-width: 1110px
+  max-width: 1140px
+  padding-left: 30px
+  padding-right: 30px
+  margin: 0 auto
+  @media all and ($medium)
+    // max-width: 932px
+    padding-left: 30px
+    padding-right: 30px
+  @media all and ($small)
+    // max-width: 690px
+    padding-left: 39px
+    padding-right: 39px
+  @media all and ($extraSmall)
+    // max-width: 738px
+    padding-left: 15px
+    padding-right: 15px
+.container
+  max-width: 1140px
   padding-left: 30px
   padding-right: 30px
   margin: 0 auto
@@ -126,7 +143,7 @@ button
   min-width: 194px
   transition: background $anim
   &:active, &:hover, &:focus
-    background: #DA3B13
+    background: #DA3B13 !important
 .btn-border
   transition: background $anim, color $anim
   &:active, &:hover, &:focus

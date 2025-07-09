@@ -1,0 +1,133 @@
+.services-page
+  .banner
+    background: $gray
+    min-height: 0
+    padding-bottom: 50px
+    @media all and ($extraSmall)
+      padding-bottom: 30px
+    .banner__content-label
+      color: #fff
+    .banner__content-tel
+      color: #fff
+    .banner__title-wrapper
+      padding-top: 0
+    .banner__content-right
+      padding-top: 40px
+    .banner__title
+      letter-spacing: -1.12px
+    .projects__item.active .projects__item-link
+      border-radius: 50px
+      border: 2px solid #FFF
+      padding: 0 20px
+      color: #fff
+    .projects__list
+      margin-top: 45px
+      padding-bottom: 40px
+      border-bottom: 1px solid #676770
+    .banner__services-link-wrtapper
+      margin-top: 30px
+      margin-bottom: 20px
+    .banner__services-link
+      padding-left: 24px
+      position: relative
+      color: $orange
+      font-size: 12px
+      font-weight: 700
+      line-height: 29px
+      text-transform: uppercase
+      &:active, &:focus,&:hover
+        text-decoration: underline
+      &::before
+        position: absolute
+        content: ""
+        background: url(/assets/img/ar-serv.svg)
+        width: 14px
+        height: 6px
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+  &__swiper
+    padding: 30px 0
+    margin-top: 10px
+    @media all and ($extraSmall)
+      margin-top: 0
+  &__swiper-wrapper
+    position: relative
+
+  &__swiper-desc-box
+    position: absolute
+    top: 40px
+    right: 0
+    @media all and ($extraSmall)
+      position: relative
+      top: 0
+  &__swiper-desc-list
+    display: grid
+    gap: 20px
+    width: 183px
+    justify-content: start
+    justify-items: start
+    @media all and ($extraSmall)
+      width: auto
+  &__swiper-desc-item
+    display: flex
+    gap: 3px
+    flex-wrap: wrap
+  &__swiper-desc-title
+    color: #fff
+    font-size: 14px
+    font-weight: 400
+    line-height: 19px
+  &__swiper-desc-text
+    color: #fff
+    font-size: 14px
+    font-weight: 700
+    line-height: 19px
+  &__swiper-desc-link
+    &:active, &:focus, &:hover
+      text-decoration: underline
+      color: #fff
+
+.swiper-container
+  width: 100%
+  height: 300px
+  // margin-left: auto
+  margin-right: auto
+  overflow: hidden
+
+.swiper-slide
+  background-size: cover
+  background-position: center
+
+.gallery-top
+  // height: 80%
+  height: 487px
+  // max-width: 867px
+  width: calc(100% - 233px)
+  margin-right: 10px
+  max-width: 867px
+  @media all and ($extraSmall)
+    width: 100%
+    height: 249px
+
+.gallery-thumbs
+  max-height: 150px
+  box-sizing: border-box
+  padding: 30px 0px
+  position: relative
+  .swiper-slide
+    width: 150px
+    height: 100%
+  .swiper-wrapper
+    padding-bottom: 40px
+.swiper-pagination
+  bottom: 0 !important
+.swiper-pagination-bullet
+  width: 30px
+  height: 3px
+  border-radius: 1px
+  background: #E7E7E7
+  @media all and ($extraSmall)
+    width: 20px
+.swiper-slide
+  border-radius: 3px

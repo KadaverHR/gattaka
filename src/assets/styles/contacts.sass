@@ -1,0 +1,26 @@
+.contacts-page
+  .contacts
+    background: $gray
+  .contacts__title
+    color: #fff
+  .contacts__desc
+    color: $orange
+  .contacts__city
+    color: #d5d5d5
+  .contacts__adress
+    color: #fff
+  .contacts__item
+    p, a, span
+      color: #fff
+    .contacts__call
+      color: $orange
+    &--mail
+      display: grid
+      grid-auto-flow: column
+      gap: 35px
+  .contacts__social-link svg path
+    fill: $orange
+    transition: fill $anim
+  .contacts__social-link
+    &:active svg path, &:focus svg path, &:hover svg path
+      fill: #fff

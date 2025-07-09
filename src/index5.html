@@ -1,13 +1,17 @@
-{% set title = "Все проекты" %} {% set bodyClass = "all-prjct" %} {% extends
+{% set title = "Все проекты" %} {% set bodyClass = "services-page" %} {% extends
 "default.html" %} {% block content %}
 <main>
-
   <section class="banner__bg">
     <div class="banner">
       <div class="grid-container banner__grid">
         <div class="banner__content-left">
           <div class="banner__logo-wrapper">
             <img src="assets/img/logo.svg" alt="Logo">
+          </div>
+          <div class="banner__services-link-wrtapper">
+            <a href="" class="banner__services-link">
+              к проектам
+            </a>
           </div>
           <div class="banner__title-wrapper">
             <h2 class="banner__title">
@@ -101,99 +105,137 @@
           </li>
         </ul>
 
-        <div class="prjct__project-list-box">
-          <p class="prjct__project-list-title">
-            Сайты
-          </p>
+      </div>
 
-          <ul class="prjct__project-list">
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/qq1.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/qq2.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-            <li class="prjct__project-item">
-              <a class="prjct__project-item-link" href="">
-                <img width="200" height="200" src="assets/img/ex1.jpg" alt="Пример сайта">
-                <p class="prjct__project-item-title">
-                  сайт-визитка
-                  “Тихий омут”
-                </p>
-              </a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="projects__content">
+          <div class="projects__content-nav">
+            <button class="projects__content-btn projects__content-btn--prev">
+
+            </button>
+            <p class="projects__content-title">
+              Лендинг “ Пицбургер”
+            </p>
+            <button class="projects__content-btn projects__content-btn--next">
+
+            </button>
 
 
-          <div class="prjct__project-btn-wrapper">
-            <div class="prjct__project-btn-box">
-              <button class="prjct__project-btn">
-                Смотреть еще
-              </button>
-            </div>
           </div>
         </div>
 
 
+        <div class="services-page__swiper-wrapper">
+
+
+          <div class="services-page__swiper">
+
+
+
+
+
+
+
+
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(assets/img/qq1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq2.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq3.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq4.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq5.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq6.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq7.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq8.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq9.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq10.jpg)"></div>
+              </div>
+
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(assets/img/qq1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq2.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq3.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq4.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq5.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq6.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq7.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq8.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq9.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(assets/img/qq10.jpg)"></div>
+
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+
+          <div class="services-page__swiper-desc-box">
+            <ul class="services-page__swiper-desc-list">
+              <li class="services-page__swiper-desc-item">
+                <p class="services-page__swiper-desc-title">
+                  Тип сайта:
+                </p>
+                <p class="services-page__swiper-desc-text">
+                  Лендинг
+                </p>
+              </li>
+              <li class="services-page__swiper-desc-item">
+                <p class="services-page__swiper-desc-title">
+                  Название:
+                </p>
+                <p class="services-page__swiper-desc-text">
+                  Пицбургер Пицбургер Пицбургер
+                </p>
+              </li>
+              <li class="services-page__swiper-desc-item">
+                <p class="services-page__swiper-desc-title">
+                  Количество страниц:
+                </p>
+                <p class="services-page__swiper-desc-text">
+                  1
+                </p>
+              </li>
+              <li class="services-page__swiper-desc-item">
+                <p class="services-page__swiper-desc-title">
+                  Платформа:
+                </p>
+                <p class="services-page__swiper-desc-text">
+                  Bitrix
+                </p>
+              </li>
+              <li class="services-page__swiper-desc-item">
+                <p class="services-page__swiper-desc-title">
+                  Год создания:
+                </p>
+                <p class="services-page__swiper-desc-text">
+                  2022
+                </p>
+              </li>
+              <li class="services-page__swiper-desc-item">
+                <p class="services-page__swiper-desc-title">
+                  Город:
+                </p>
+                <p class="services-page__swiper-desc-text">
+                  Орел
+                </p>
+              </li>
+              <li class="services-page__swiper-desc-item">
+                <p class="services-page__swiper-desc-title">
+                  Адрес:
+                </p>
+                <a href="" class="services-page__swiper-desc-text services-page__swiper-desc-link">
+                  www.resource.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+
   </section>
 
   <section class="prjct__form grid-container">
@@ -239,57 +281,5 @@
       </form>
     </div>
   </section>
-
-  <section class="contacts">
-    <div class="grid-container">
-      <div class="contacts__title-wrapper">
-        <h2 class="contacts__title">
-          Контактная информация
-        </h2>
-      </div>
-      <div class="contacts__desc-wrapper">
-        <p class="contacts__desc">
-          Работаем по всей России
-        </p>
-      </div>
-      <ul class="contacts__list">
-        <li class="contacts__item contacts__item--city">
-          <p class="contacts__city">
-            Орел
-          </p>
-        </li>
-        <li class="contacts__item contacts__item--call">
-          <a href="" class="contacts__call">
-            Заказать обратный звонок
-          </a>
-        </li>
-
-        <li class="contacts__item contacts__item--adress">
-          <p class="contacts__adress">
-            Адрес: 117630, <span>ул. Михалицына, д.10</span>
-          </p>
-        </li>
-        <li class="contacts__item contacts__item--mail">
-          <p class="contacts__mail">
-            E-mail: <a href="mailto:gattaka@com" type="mail">gattaka@com</a>
-          </p>
-        </li>
-        <li class="contacts__item contacts__item--tel">
-          <p class="contacts__tel">
-            Тел.:
-            <a href="tel:+7800350-00-87" type="tel">8 (800) 350-00-87</a>
-          </p>
-        </li>
-      </ul>
-
-    </div>
-    <div class="contacts__map">
-      <script type="text/javascript" charset="utf-8" async
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A75588bbcc9896dfcaef0492b733e383467a1bb271ac0f8cadb473f8469082b8c&amp;width=100%25&amp;height=313&amp;lang=ru_RU&amp;scroll=true"></script>
-    </div>
-  </section>
 </main>
-
-
-
 {% endblock %}

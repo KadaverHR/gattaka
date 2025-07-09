@@ -1,0 +1,234 @@
+{% set title = "Все проекты" %} {% set bodyClass = "services-page" %} {% extends
+"default.html" %} {% block content %}
+<main>
+
+  <section class="services">
+    <div class="services__top">
+      <div class="grid-container ">
+        <div class="services__top-box">
+          <h2 class="services__top-title">
+            Услуги
+          </h2>
+          <div class="services__top-contacts-block">
+            <a href="+74862302090" class="banner__content-tel">8 (4862) <span>30-20-90</span> </a>
+            <button data-fancybox="test" data-src="#order" data-type="inline"
+              class="btn-orange banner__content-button ">
+              Оставить заявку
+            </button>
+            <div style="display: none" id="order" class="call__modal">
+              <p class="call__title">
+                Заказать дизайн-проект / задать вопрос
+              </p>
+              <p class="call__desc">
+                Оставьте контактные данные и менеджер перезвонит Вам в ближайшее время.
+              </p>
+              <form action="" method="get" class="form form--call">
+                <div class="form__block">
+                  <div class="form__input-block">
+                    <label for="name">
+                      <input type="text" name="name" id="name" required placeholder="Имя" />
+                    </label>
+                  </div>
+                  <div class="form__input-block">
+                    <label for="tel">
+                      <input type="tel" name="tel" id="tel" placeholder="Телефон" required />
+                    </label>
+                  </div>
+                  <div class="form__input-block">
+                    <label for="email">
+                      <input type="email" name="email" id="email" required placeholder="E-mail" />
+                    </label>
+                  </div>
+                  <div class="checkbox__item">
+                    <label for="check2">
+                      <input class="checkbox__input" type="checkbox" name="check2" id="check2">
+                      <span class="checkbox__custom"></span>
+                      <span class="checkbox__text">
+                        Я согласен с условиями передачи данных.<br> <a href="">Соглашение.</a>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form__btn-wrapper">
+                  <button data-fancybox="test" data-src="#call" data-type="inline" class="btn-orange form__btn"
+                    type="submit">Заказать звонок</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container services__item">
+        <div class="services__item-text-box">
+          <h3 class="services__item-title">Печатная продукция</h3>
+          <a href="" class="services__item-link services__item-link--mobile">
+            <img src="assets/img/rub.svg">
+            <p class="services__item-text services__item-text--strong">
+              Стоимость услуг и сроки<br> их оказания
+            </p>
+          </a>
+          <p class="services__item-text">
+            Цифровые ресурсы стали основой современного бизнеса. Опросы маркетологов показывают, что полиграфия
+            по-прежнему привлекает 80 % потребителей. Виды печатных изданий для продвижения бренда. Узнаваемый образ
+            компании складывается из множества элементов – цвета, логотипа, слогана, графических элементов.
+            Полиграфическая продукция служит отличным имиджевым носителем, так как отражает изображения и текст
+            одновременно.
+          </p>
+          <p class="services__item-text services__item-text--strong">
+            Листовки, буклеты, каталоги, календари, визитки и другая печатная продукция.
+          </p>
+        </div>
+        <div class="services__item-img-box">
+          <a href="" class="services__item-link">
+            <img src="assets/img/rub.svg">
+            <p class="services__item-text services__item-text--strong">
+              Стоимость услуг и сроки<br> их оказания
+            </p>
+          </a>
+          <img class="services__item-img" width="408" height="250" src="assets/img/s1.jpg">
+        </div>
+      </div>
+    </div>
+
+    <div class="services__center">
+
+      <div class="grid-container services__item">
+        <div class="services__item-img-box">
+          <img class="services__item-img" width="408" height="250" src="assets/img/s2.jpg">
+        </div>
+        <div class="services__item-text-box">
+          <h3 class="services__item-title">Сайты</h3>
+          <p class="services__item-text">
+            Интернет развивается стремительно и сегодня большинство компаний уже имеют свои сайты. Впрочем, не только
+            компании, но и частные лица, оказывающие те или иные услуги. Иметь интернет-ресурс – это, скорее,
+            необходимость.
+          </p>
+          <p class="services__item-text services__item-text--strong">
+            Разрабатываем сайты “под ключ” любой сложности. Сайт-визитка, лендинг, корпоративный сайт, интернет-магазин
+            и т.д.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="services__bottom">
+      <div class="grid-container services__item">
+
+        <div class="services__item-text-box">
+          <h3 class="services__item-title">Фирменный стиль</h3>
+          <p class="services__item-text">
+            Фирменный стиль нужен компаниям не только в качестве красивой обертки продукта и оформления пространства
+            офиса. Это эффективно работающий маркетинговый инструмент для бизнеса, который выполняет ряд важных функций.
+          </p>
+          <p class="services__item-text services__item-text--strong">
+            Основа фирменного стиля состоит из логотипа, товарного знака, корпоративных цветов и шрифтов. Может включать
+            эмблему.
+          </p>
+        </div>
+        <div class="services__item-img-box">
+          <img class="services__item-img" width="408" height="250" src="assets/img/s3.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prjct__form grid-container">
+    <div class="form__wrapper">
+      <form action="" method="get" class="form">
+        <div class="form__title-wrapper">
+          <p class="form__title">
+            Заказать дизайн-проект / задать вопрос
+          </p>
+        </div>
+        <div class="form__block">
+          <div class="form__input-block">
+            <label for="name">
+              <input type="text" name="name" id="name" required placeholder="Имя" />
+            </label>
+          </div>
+          <div class="form__input-block">
+            <label for="tel">
+              <input type="tel" name="tel" id="tel" placeholder="Телефон" required />
+            </label>
+          </div>
+
+          <div class="form__input-block">
+            <label for="email">
+              <input type="email" name="email" id="email" required placeholder="E-mail" />
+            </label>
+          </div>
+
+          <div class="checkbox__item">
+            <label for="check1">
+              <input class="checkbox__input" type="checkbox" name="check1" id="check1">
+              <span class="checkbox__custom"></span>
+              <span class="checkbox__text">
+                Я согласен с условиями передачи данных.<br> <a href="">Соглашение.</a>
+              </span>
+            </label>
+          </div>
+
+        </div>
+        <div class="form__btn-wrapper">
+          <button class="btn-orange form__btn" type="submit">Отправить сообщение</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="grid-container">
+      <div class="contacts__title-wrapper">
+        <h2 class="contacts__title">
+          Контактная информация
+        </h2>
+      </div>
+      <div class="contacts__desc-wrapper">
+        <p class="contacts__desc">
+          Работаем по всей России
+        </p>
+      </div>
+      <ul class="contacts__list">
+        <li class="contacts__item contacts__item--city">
+          <p class="contacts__city">
+            Орел
+          </p>
+        </li>
+        <li class="contacts__item contacts__item--call">
+          <a href="" class="contacts__call">
+            Заказать обратный звонок
+          </a>
+        </li>
+
+        <li class="contacts__item contacts__item--adress">
+          <p class="contacts__adress">
+            Адрес: 117630, <span>ул. Михалицына, д.10</span>
+          </p>
+        </li>
+        <li class="contacts__item contacts__item--mail">
+          <p class="contacts__mail">
+            E-mail: <a href="mailto:gattaka@com" type="mail">gattaka@com</a>
+          </p>
+        </li>
+        <li class="contacts__item contacts__item--tel">
+          <p class="contacts__tel">
+            Тел.:
+            <a href="tel:+7800350-00-87" type="tel">8 (800) 350-00-87</a>
+          </p>
+        </li>
+      </ul>
+
+    </div>
+    <div class="contacts__map">
+      <script type="text/javascript" charset="utf-8" async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A75588bbcc9896dfcaef0492b733e383467a1bb271ac0f8cadb473f8469082b8c&amp;width=100%25&amp;height=313&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+  </section>
+</main>
+
+
+
+{% endblock %}
